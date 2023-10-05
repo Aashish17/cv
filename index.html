@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>💝 Aashish's Personal Html Website.</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Add the smartVwoAbort function here -->
+    <script>
+        function smartVwoAbort() {
+            if (!navigator.userAgent.match(/firefox|fxios/i)) {
+                return;
+            }
+
+            var isPvtWin = false;
+            try {
+                window.indexedDB.open('test');
+            } catch (e) {
+                isPvtWin = true;
+            }
+
+            if (!isPvtWin) {
+                return;
+            }
+
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if (this.status != 200) {
+                    // stop vwo load
+                }
+            };
+            request.open("OPTIONS", "https://dev.visualwebsiteoptimizer.com", true);
+            request.send();
+        }
+    </script>
+</head>
+
+<body>
+    <table cellspacing="30px">
+        <tr>
+            <td><img src="aashish.jpg" alt="Aashish's Profile Picture" width="200px" height="200px"> </td>
+            <td><h1>Aashish Kanesh</h1>
+                <p><em>Student at <a href="https://www.iiitm.ac.in/index.php/en/">IIIT Gwalior</a> and a <strong> <a href="https://en.wikipedia.org/wiki/Web_development">Web Developer</a> </strong>.</em></p>
+                <p>I am an Executive at <a href="https://www.ecelliiitm.in/">Ecell IIIT Gwalior</a>.I 💛 to play Cricket and Football.I am a Problem solver.</p>
+                <h3><a href="contact.html">Contact Details</a></h3>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <h2 >Education</h2>
+    <ul>
+        <li><a href="https://www.iiitm.ac.in/index.php/en/">Atal Bihari Vajpayee-Indian Institute of Information Technology and Management (ABV-IIITM), Gwalior</a></li>
+        <li><a href="http://giaedu.in/">Gautam International Academy,Dhar</a></li>
+    </ul>
+    <hr>
+    <h2> My Hobbies</h2>
+    <ol type="a">
+        <li>Cricket</li>
+        <li>Football</li>
+        <li>Bike Riding</li>
+        <li>Mobile and Pc Games</li>
+    </ol>
+    <hr >
+    <h2>Skills</h2>
+    <table  cellspacing="10">
+        <tr>
+            <td><strong>Web Development</strong></td>
+            <td>⭐⭐⭐ </td>
+        </tr>
+        <tr>
+            <td><strong>C++</strong></td>
+            <td>⭐⭐⭐⭐</td>
+        </tr>
+
+        <tr>
+            <td><strong>DSA</strong></td>
+            <td>⭐⭐</td>
+        </tr>
+        <tr>
+            <td><strong>Coding</strong></td>
+            <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+
+    </table>
+
+    <hr>
+    <h3><a href="contact.html">Contact Details</a></h3>
+</body>
+</html>
